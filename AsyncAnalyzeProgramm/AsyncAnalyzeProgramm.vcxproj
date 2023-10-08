@@ -131,11 +131,13 @@
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="Massive.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="Operation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />
     <ClInclude Include="Massive.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Operation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
