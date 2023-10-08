@@ -3,8 +3,8 @@
 class Massive
 {
 public:
-	Massive();
 	void fillingMAssive(int*);
-	~Massive();
+	unsigned long sumOfArray(int*);
+	unsigned long sumOfArrayAsync(int*);
 };
 
