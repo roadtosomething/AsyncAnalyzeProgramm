@@ -16,9 +16,14 @@ void Matrix::fillingMatrix (int** matrix) {
 	if (in.is_open()) {
 		cout << "File \"" << fileName << "\" is open\n";
 		cout << "Filling array...\n";
-		for (long i = 0; i < config.getSizeOfMatrix(); i++) {
-			for (long j = 0; j < config.getSizeOfMatrix(); j++) {
-				in >> matrix[i][j];
+#pragma omp parallel shared(array) num_threads(config.getNumberOfThreads())
+		{
+#pragma omp for
+			for (long i = 0; i < config.getSizeOfMatrix(); i++) {
+#pragma omp for
+				for (long j = 0; j < config.getSizeOfMatrix(); j++) {
+					in >> matrix[i][j];
+				}
 			}
 		}
 		cout << "Array is filling.\n";

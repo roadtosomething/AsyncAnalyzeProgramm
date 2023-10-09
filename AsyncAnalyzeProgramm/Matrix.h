@@ -2,6 +2,5 @@
 class Matrix
 {
 public:
-	void fillingMatrix(int**)
+	void fillingMatrix(int**);
 };
-
